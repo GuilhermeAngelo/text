@@ -1,3 +1,4 @@
+#include "validacoes.h"
 
 void cadastrarUser(void) {
     char nome[61];
@@ -19,12 +20,13 @@ void cadastrarUser(void) {
     getchar();
     printf("//.   CPF - apenas numeros - : ");
     scanf("%s", cpf);
+    getchar();
     while (validaCPF(cpf) == 0){
         printf("CPF INVALIDO\n\n");
         printf("//.   CPF - apenas numeros - : ");
-        scanf("%[0-9]", cpf);
+        scanf("%s", cpf);
+        getchar();
     }
-    getchar();
     printf("//.   EMAIL: ");
     scanf("%[A-ZÁÉÍÓÚÂÊÔÃÕa-záéíóúâêôãõ@0-9.]",&email);
     getchar();

@@ -1,3 +1,5 @@
+#include <string.h>
+
 int validaCPF(char cpf[]) {
   int tam, soma, d1, d2;
   int cpfInt[11];
